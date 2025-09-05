@@ -21,13 +21,13 @@ mkdir -p "$BACKUP_ROOT"
 docker run --rm \
     -v "$DATA_FOLDER:/home/node/.n8n:ro" \
     -v "$BACKUP_ROOT:/backup" \
-    -e N8N_ENCRYPTION_KEY="${N8N_ENCRYPTION_KEY:-}" \
-    -e GENERIC_TIMEZONE="${GENERIC_TIMEZONE:-UTC}" \
-    -e TZ="${TZ:-UTC}" \
+    -e N8N_ENCRYPTION_KEY="${N8N_ENCRYPTION_KEY:-dU152cib4V5mdLt2m7Is41QBACJgjTFgxdPN3Kgt}" \
+    -e GENERIC_TIMEZONE="${GENERIC_TIMEZONE:-Asia/Kolkata}" \
+    -e TZ="${TZ:-Asia/Kolkata}" \
     -u node \
     n8nio/n8n:latest \
     n8n export:workflow --backup --output="/backup/$EXPORT_DIR/" --data="/home/node/.n8n"
 
 echo "✅ Workflows exported successfully to: $BACKUP_ROOT/$EXPORT_DIR/"
 echo "📁 Export contents:"
-ls -la "$BACKUP_ROOT/$EXPORT_DIR/" || echo "Could not list export contents"
+ls -la "$BACKUP_ROOT/$EXPORT_DIR/" || echo "Could not list contents."
