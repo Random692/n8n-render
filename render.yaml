@@ -19,7 +19,7 @@ services:
       - key: DB_POSTGRESDB_USER
         value: postgres.erdtrklavmoxiqjkjyym
       - key: DB_POSTGRESDB_PASSWORD
-        value: A123@#SQW
+        value: Random@#12random
       - key: DB_POSTGRESDB_SCHEMA
         value: public
       - key: WEBHOOK_URL
